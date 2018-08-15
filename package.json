@@ -2,9 +2,9 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "A webapp to display my works and also collect information from prospective clients who may want to leave a \u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[some messages",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "babel-node --presets env server/app.js",
+    "start": "babel --presets env server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "XROLE DIAMOND",
@@ -17,7 +17,8 @@
     "@babel/core": "^7.0.0-rc.1",
     "@babel/node": "^7.0.0-rc.1",
     "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^5.2.0",
     "eslint-config-airbnb-base": "^13.1.0"
   }
