@@ -1,11 +1,11 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+import express from 'express';
+import bodyParser from 'body-parser';
 
 const app = express();
 
 const port = process.env.PORT || 3000;
 
-app.get('/', function(req, res){
+app.get('/', (req, res) => {
     res.send('I am a chosen one');
 })
 
