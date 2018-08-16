@@ -2,7 +2,7 @@ import { Router } from "express";
 import mongoose from 'mongoose';
 import Message from '../model/messages';
 
-mongoose.connect('mongodb://localhost/hireme', { useNewUrlParser: true } );
+mongoose.connect('mongodb://localhost:27017/hireme', { useNewUrlParser: true } );
 const db = mongoose.connection;
 
 const router = Router();
@@ -19,10 +19,10 @@ router.post('/portfolio/views', (req, res) => {
      }
      res.json(message)
  })
-})
+});
 
 router.get('/portfolio/views', (req, res) => {
-    Message.postMessage((err, messages) => {
+    Message.getMessages((err, messages) => {
         if(err){
             throw err;
         }
