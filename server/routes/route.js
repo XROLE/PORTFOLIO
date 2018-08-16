@@ -1,4 +1,9 @@
 import { Router } from "express";
+import mongoose from 'mongoose';
+import Mess from '../model/messages';
+
+mongoose.connect('mongodb://localhost/hireme');
+const db = mongoose.connection;
 
 const router = Router();
 
@@ -7,7 +12,12 @@ router.get('/', (req, res) => {
 });
 
 router.get('/portfolio/views', (req, res) => {
-    res.send('these are the list of messages available');
+    Mess.getMessages((err, messages) => {
+        if(err){
+            throw err;
+        }
+        res.json(messages)
+    })
 });
 
 router.post('/portfolio/add/view', (req, res) => {

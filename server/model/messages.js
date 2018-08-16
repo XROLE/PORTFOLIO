@@ -1,23 +1,19 @@
 import mongoose from 'mongoose';
-import timestamps from 'mongoose-timestamp';
 
-mongoose.connect('mongodb://localhose/hireme');
-
-const Schema = mongoose.Schema;
-
-const messageSchema = new Schema({
+const messageSchema = mongoose.Schema({
     email: {
-        type: sring,
+        type: String,
         trim: true,
         lowercase: true,
         unique: true,
         required: true
     }, 
     name:{
-        type: string,
+        type: String,
         required: true
     },
     message:{
+        type: String,
         required: true
     },
     create_at:{
@@ -25,11 +21,9 @@ const messageSchema = new Schema({
         default: Date.now 
     }
 });
-
-export default Message = mongoose.model('Message', messageSchema);
+const Message = module.exports = mongoose.model('Message', messageSchema);
 
 // get all messages
-
-export const getMessages = (cb, limit) => {
-    message.find(cb).limit(limit);
+module.exports.getMessages = (cb, limit) => {
+    Message.find(cb).limit(limit);
 }
