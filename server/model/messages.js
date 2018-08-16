@@ -23,7 +23,13 @@ const messageSchema = mongoose.Schema({
 });
 const Message = module.exports = mongoose.model('Message', messageSchema);
 
+//  post message
+module.exports.postMessage = (postedMessage, cb) => {
+    Message.create(postedMessage, cb);
+}
+
 // get all messages
 module.exports.getMessages = (cb, limit) => {
     Message.find(cb).limit(limit);
 }
+
