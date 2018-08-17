@@ -1,8 +1,10 @@
+import dotenv from 'dotenv';
+dotenv.load();
 import { Router } from "express";
 import mongoose from 'mongoose';
 import Message from '../model/messages';
 
-mongoose.connect('mongodb://localhost:27017/hireme', { useNewUrlParser: true } );
+mongoose.connect(process.env.DB_URI_dev, { useNewUrlParser: true } );
 const db = mongoose.connection;
 
 const router = Router();

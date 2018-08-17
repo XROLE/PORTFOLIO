@@ -1,6 +1,9 @@
+import dotenv from 'dotenv';
+dotenv.load();
 import express from 'express';
 import bodyParser from 'body-parser';
 import router from './routes/route';
+
 
 const app = express();
 
