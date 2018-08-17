@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A webapp to display my works and also collect information from prospective clients who may want to leave a \u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[some messages",
   "scripts": {
-    "start": "babel-node server/app.js"
+    "start": "babel-node server/app.js",
+    "test": "mocha --timeout 10000"
   },
   "author": "XROLE DIAMOND",
   "license": "ISC",
