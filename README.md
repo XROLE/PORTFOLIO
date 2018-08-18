@@ -17,7 +17,7 @@ Run npm test or npm run test
 ```
 
 ## Author
-* **Eze Nzube Goodness** - *(a.k.a Xrole)*
+* **Eze Nzube Goodness** - *(a.k.a XROLE)*
 
 ## Acknowledgments
 
