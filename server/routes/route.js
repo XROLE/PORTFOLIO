@@ -19,7 +19,7 @@ router.post('/portfolio/views', (req, res) => {
      if (err){
          throw err;
      }
-     res.json(message)
+     res.json({ success: "Message sent succesfuly", message});
  })
 });
 
