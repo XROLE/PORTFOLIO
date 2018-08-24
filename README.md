@@ -1,6 +1,6 @@
 # My portfolio
 
-[![Build Status](https://travis-ci.com/XROLE/PORTFOLIO.svg?branch=develop)](https://travis-ci.com/XROLE/PORTFOLIO)
+[![Build Status](https://travis-ci.com/XROLE/PORTFOLIO.svg?branch=develop)](https://travis-ci.com/XROLE/PORTFOLIO)[![Maintainability](https://api.codeclimate.com/v1/badges/a2f89ebe66a61c6b014a/maintainability)](https://codeclimate.com/github/XROLE/PORTFOLIO/maintainability)
 
 A webapp with the few sample of my works. It also provides extra functionality that allows users to leave a hiring message hence gives only the admin access to view all message.
 
