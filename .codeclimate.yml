@@ -12,4 +12,5 @@ checks:
 
 exclude_path:
   -"node_modules/"
+  -"procfile"
   
