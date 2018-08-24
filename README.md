@@ -1,5 +1,7 @@
 # My portfolio
 
+[![Build Status](https://travis-ci.com/XROLE/PORTFOLIO.svg?branch=develop)](https://travis-ci.com/XROLE/PORTFOLIO)
+
 A webapp with the few sample of my works. It also provides extra functionality that allows users to leave a hiring message hence gives only the admin access to view all message.
 
 ## Getting Started
