@@ -5,7 +5,7 @@
   "scripts": {
     "start": "babel-node server/app.js",
     "test": "nyc ---reporter=html --reporter=text mocha --timeout 10000 --require babel-core/register --exit",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "coverage": "nyc npm test&& nyc report --reporter=text-lcov | coveralls",
     "coveralls": "nyc npm test&& nyc report --reporter=text-lcov | coveralls"
   },
   "author": "XROLE DIAMOND",
