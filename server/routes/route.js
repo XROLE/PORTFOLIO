@@ -10,7 +10,7 @@ const db = mongoose.connection;
 const router = Router();
 
 router.get('/', (req, res) => {
-    res.send('Welcome to the home page. Please visit \'http://localhost:3000/portfolio/views\' to view all messages ')
+    res.send('Welcome to the HOME page. Please visit \'http://localhost:3000/portfolio/views\' to view all messages ')
 });
 
 router.post('/portfolio/views', (req, res) => {
