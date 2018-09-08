@@ -20,8 +20,8 @@ router.post('/portfolio/views', (req, res) => {
     
     sgMail.setApiKey(process.env.SENDGRID_API_KEY); // sending email message
         const msg = {
-        to: 'xrolediamond@gmail.com',
-        from: 'meetXrole@meetXrole.herokuapp.com',
+        to: email,
+        from: 'no-reply@meetXrole.herokuapp.com',
         subject: 'MeetXrole',
         text: 'Your message delivered successfully. Please keep an eye on your mail,we will get back to you through this medium. Thanks. Team MeetXrole',
     };
