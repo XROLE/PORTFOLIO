@@ -5,6 +5,8 @@ const messageSchema = mongoose.Schema({
         type: String,
         trim: true,
         lowercase: true,
+        unique: false,
+        autoIndex: false,
         required: true
     }, 
     name:{
@@ -19,8 +21,12 @@ const messageSchema = mongoose.Schema({
         type: Date,
         default: Date.now 
     }
+},
+{
+    autoIndex: false
 });
 const Message = module.exports = mongoose.model('Message', messageSchema);
+Message.ensureIndexes();
 
 //  post message
 module.exports.postMessage = (postedMessage, cb) => {
