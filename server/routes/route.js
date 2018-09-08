@@ -23,7 +23,7 @@ router.post('/portfolio/views', (req, res) => {
         to: email,
         from: 'no-reply@meetXrole.herokuapp.com',
         subject: 'MeetXrole',
-        text: 'Your message delivered successfully. Please keep an eye on your mail,we will get back to you through this medium. Thanks. Team MeetXrole',
+        text: 'Your message was delivered successfully. Please keep an eye on your mail,we will get back to you through this medium. Thanks. Team MeetXrole',
     };
     sgMail.send(msg);
  Message.postMessage(message, (err, message) => {
