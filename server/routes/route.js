@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.load();
 import { Router } from "express";
+const sgMail = require('@sendgrid/mail');
 import mongoose from 'mongoose';
 import Message from '../model/messages';
 
@@ -15,6 +16,17 @@ router.get('/', (req, res) => {
 
 router.post('/portfolio/views', (req, res) => {
     const message = req.body;
+    const email = req.body.email;
+    console.log(email); // Out putting mail to make sure the body gets the email
+
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY); // sending email message
+        const msg = {
+        to: 'xrolediamond@gmail.com',
+        from: 'meetXrole@gmail.com',
+        subject: 'MeetXrole message recieved',
+        text: 'I am a chosen one',
+    };
+    sgMail.send(msg);
  Message.postMessage(message, (err, message) => {
      if (err){
          throw err;
